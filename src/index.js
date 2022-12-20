@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './index.css';
 import Page from './pages/page';
 import Home from './pages/home/home';
+import Form from './pages/form/form';
 import reportWebVitals from './reportWebVitals';
+
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +15,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Page />}>
           <Route index element={<Home />} />
+          <Route path='form' element={<Form />} />
         </Route>
       </Routes>
     </BrowserRouter>

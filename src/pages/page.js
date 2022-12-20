@@ -16,7 +16,7 @@ const Page = () => {
             MENU
           </li>
           <li className="left-list">
-            Form
+            <Link to="/form">Form</Link>
           </li>
           <li className="left-list">
             Notebook
