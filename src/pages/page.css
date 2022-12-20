@@ -35,6 +35,15 @@
   border-bottom-style: none;
 }
 
+.left-list>a {
+  color: #000;
+  text-decoration: none;
+}
+
+.left-list>a:hover {
+  color: brown;
+}
+
 @media all and (min-width: 601px) {
   .left-menu {
     transition-property: width;
