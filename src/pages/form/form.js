@@ -20,9 +20,16 @@ const Form = () => {
       return
     }
 
+    var numbers = /[0-9]+/;
+
+    if (person_name.match(numbers) || person_last_name.match(numbers)) {
+      setPersonError('Imię i nazwisko nie może zawierać cyfr!');
+      return
+    }
+
     setPersonError(null);
 
-    setPerson(persons.concat({ 'name': person_name, 'last_name': person_last_name}));
+    setPerson(persons.concat({ 'name': person_name, 'last_name': person_last_name }));
     document.getElementById('user_form').reset();
   }
 
@@ -38,11 +45,11 @@ const Form = () => {
         <form id='user_form' className='style-form'>
           <div className='line-padding'>
             <label htmlFor='firstName'>Imię*</label><br />
-            <input ref={personName} type='text' id='firstName' />
+            <input ref={personName} alt='name' type='text' id='firstName' />
           </div>
           <div className='line-padding'>
             <label htmlFor='lastName'>Nazwisko*</label><br />
-            <input ref={personLastName} type='text' id='lastName' />
+            <input ref={personLastName} alt='surname' type='text' id='lastName' />
           </div>
           <div className='line-padding'>
             <label htmlFor='eMail'>E-mail</label><br />
