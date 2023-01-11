@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Page from './pages/page';
 import Home from './pages/home/home';
 import Form from './pages/form/form';
@@ -11,14 +12,14 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Page />}>
           <Route index element={<Home />} />
           <Route path='form' element={<Form />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
