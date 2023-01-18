@@ -12,8 +12,11 @@ const Page = () => {
       </nav>
       <nav id='nav_panel'>
         <ul className="left-menu">
-          <li className="left-list">
+          {/* <li className="left-list">
             MENU
+          </li> */}
+          <li className="left-list">
+            <Link to="/">Home Page</Link>
           </li>
           <li className="left-list">
             <Link to="/form">Form</Link>
