@@ -12,9 +12,6 @@ const Page = () => {
       </nav>
       <nav id='nav_panel'>
         <ul className="left-menu">
-          {/* <li className="left-list">
-            MENU
-          </li> */}
           <li className="left-list">
             <Link to="/">Home Page</Link>
           </li>
@@ -22,7 +19,7 @@ const Page = () => {
             <Link to="/form">Form</Link>
           </li>
           <li className="left-list">
-            Notebook
+            <Link to="/weather">Weather</Link>
           </li>
           <li className="left-list">
             Quiz
